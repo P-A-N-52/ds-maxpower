@@ -1,0 +1,35 @@
+{
+	"version": "0.1.0",
+	"date": "2026-09-06",
+	"piVersion": "0.85.1",
+	"piRevision": "da840b6216578c2a571d0374ac6a2091a83f9d91",
+	"offlineTests": { "extension": 27, "apiLab": 14 },
+	"liveExtensionSmoke": {
+		"model": "deepseek-v4-pro",
+		"api": "openai-completions",
+		"passed": true,
+		"httpRequests": 4,
+		"firstPasses": 2,
+		"readToolCalls": 1,
+		"answer": "42",
+		"elapsedMs": 9107,
+		"uncachedInputTokens": 2248,
+		"cachedInputTokens": 2048,
+		"outputTokens": 436,
+		"preAbortedRequestReachedHttp": false,
+		"verified": [
+			"max reasoning",
+			"32768 output limit",
+			"identical first-pass inputs",
+			"trace prefix",
+			"tool-loop trace reuse",
+			"no trace in persisted session"
+		]
+	},
+	"limitations": [
+		"50,000 Unicode characters per trace; exact token clipping is not implemented",
+		"Two-case graph calibration did not show an accuracy gain",
+		"Real coding-task effectiveness and other Pi versions remain unverified"
+	],
+	"rawRecords": "Retained locally; release contains aggregate results only."
+}

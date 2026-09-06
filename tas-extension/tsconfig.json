@@ -1,0 +1,6 @@
+{
+	"extends": "../pi/tsconfig.json",
+	"compilerOptions": { "target": "ES2024", "lib": ["ES2024"], "typeRoots": ["../pi/node_modules/@types"] },
+	"include": ["./*.ts", "../pi/packages/coding-agent/src/utils/highlight-js.d.ts"],
+	"exclude": []
+}

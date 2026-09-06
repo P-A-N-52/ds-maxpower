@@ -1,0 +1,21 @@
+{
+	"name": "pi-tas",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "Trace as State session mode for Pi and DeepSeek",
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	},
+	"scripts": {
+		"check": "../pi/node_modules/.bin/tsc --project tsconfig.json --noEmit",
+		"test": "TSX_TSCONFIG_PATH=../pi/tsconfig.json node --import ../pi/node_modules/tsx/dist/loader.mjs --test protocol.test.ts archive.test.ts integration.test.ts kimi-config.test.mjs"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "0.85.1",
+		"@earendil-works/pi-agent-core": "0.85.1",
+		"@earendil-works/pi-coding-agent": "0.85.1"
+	}
+}

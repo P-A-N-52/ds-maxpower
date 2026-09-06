@@ -1,0 +1,54 @@
+{
+	"name": "ds-maxpower",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "Trace as State mode for Pi and DeepSeek V4",
+	"keywords": [
+		"pi-package",
+		"deepseek",
+		"trace-as-state"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/P-A-N-52/ds-maxpower.git"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"pi": {
+		"extensions": [
+			"./tas-extension/index.ts"
+		]
+	},
+	"files": [
+		"tas-extension/index.ts",
+		"tas-extension/archive.ts",
+		"tas-extension/protocol.ts",
+		"tas-extension/README.md",
+		"docs/validation-0.1.0.json"
+	],
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "*",
+		"@earendil-works/pi-agent-core": "*",
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"peerDependenciesMeta": {
+		"@earendil-works/pi-ai": {
+			"optional": true
+		},
+		"@earendil-works/pi-agent-core": {
+			"optional": true
+		},
+		"@earendil-works/pi-coding-agent": {
+			"optional": true
+		}
+	},
+	"scripts": {
+		"setup": "node scripts/setup.mjs",
+		"check": "npm --prefix tas-extension run check",
+		"test": "npm --prefix tas-extension test && npm --prefix tas-lab test",
+		"release:pack": "node scripts/pack-release.mjs",
+		"release:verify": "node scripts/verify-release.mjs"
+	}
+}

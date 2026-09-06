@@ -1,0 +1,9 @@
+.pi/tas/
+.tas-pi/
+/pi/
+/dist/
+**/node_modules/
+**/runs/
+.DS_Store
+.env
+.env.*
